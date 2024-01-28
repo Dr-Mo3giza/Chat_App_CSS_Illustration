@@ -61,12 +61,13 @@ body {
   height: 100vh;
   overflow: hidden;
   background-color: hsl(270deg 20% 96% / 30%);
+  width: 1440px;
 }
 
 .page .left-bg {
   background-color: blueviolet;
   width: 450px;
-  height: calc(100vh + 8px);
+  height: 90vh;
   border-bottom-left-radius: 215px;
   border-bottom-right-radius: 215px;
   position: absolute;
@@ -97,7 +98,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 900px;
+  width: 970px;
 }
 
 .page .container .chat-app {
@@ -107,7 +108,7 @@ body {
   border-radius: 30px;
   overflow: hidden;
   padding: 10px;
-  margin-left: 90px;
+  margin-left: 95px;
   box-shadow: 20px 26px 20px 12px #0000000d;
 }
 
