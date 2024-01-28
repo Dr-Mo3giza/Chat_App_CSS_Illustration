@@ -1,0 +1,292 @@
+/* Start Variables */
+:root {
+  --sent-color: hsl(271, 15%, 43%);
+  --recieved-color: hsl(276, 55%, 52%);
+  --grad-one: hsl(293, 100%, 63%);
+  --grad-two: hsl(264, 100%, 61%);
+}
+
+/* End Variables */
+/* Start Global Rules */
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* End Global Rules */
+
+/* Start Components */
+.text-msg {
+  font-size: 8px;
+  line-height: 11px;
+  background-color: hsl(276deg 55% 52% / 7%);
+  width: 124px;
+  padding: 6px;
+  margin: 7px;
+  border-radius: 11px;
+  border-bottom-left-radius: 3px;
+}
+
+.text-msg.sent {
+  border-bottom-left-radius: 11px;
+  border-bottom-right-radius: 3px;
+}
+
+.text-msg.short {
+  width: fit-content;
+}
+
+.rec {
+  color: hsl(276, 55%, 52%);
+}
+
+.sent {
+  color: hsl(271, 15%, 43%);
+  margin-left: auto;
+  background-color: white;
+}
+
+/* End Components */
+
+/* Start Page Background */
+.page {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-color: hsl(270deg 20% 96% / 30%);
+}
+
+.page .left-bg {
+  background-color: blueviolet;
+  width: 450px;
+  height: calc(100vh + 8px);
+  border-bottom-left-radius: 215px;
+  border-bottom-right-radius: 215px;
+  position: absolute;
+  left: -65px;
+  top: 0;
+  background-image: linear-gradient(200deg, hsl(293, 100%, 63%) -40%, hsl(265, 100%, 61%) 129%);
+  z-index: -1;
+}
+
+.page .right-bg {
+  background-color: hsl(270, 20%, 96%);
+  border-top-left-radius: 215px;
+  border-top-right-radius: 215px;
+  width: 450px;
+  height: 85%;
+  position: absolute;
+  right: -150px;
+  bottom: 0;
+  z-index: -1;
+}
+
+/* End Page Background */
+
+/* Start Mobile Chat App */
+.page .container {
+  margin: 100px auto 0;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 900px;
+}
+
+.page .container .chat-app {
+  background-color: white;
+  width: 240px;
+  height: 485px;
+  border-radius: 30px;
+  overflow: hidden;
+  padding: 10px;
+  margin-left: 90px;
+  box-shadow: 20px 26px 20px 12px #0000000d;
+}
+
+.page .container .chat-app .chat-bg {
+  background-color: hsl(270, 20%, 96%);
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.page .container .chat-app .chat-bg .c-header {
+  background-image: linear-gradient(45deg, hsl(264, 100%, 61%) 5%, hsl(293, 100%, 63%));
+  border-radius: 5px;
+}
+
+.page .container .chat-app .chat-bg .c-header .earphone {
+  width: 50%;
+  height: 35px;
+  background: white;
+  border-radius: 15px;
+  margin: -17px auto 0;
+}
+
+.page .container .chat-app .chat-bg .c-header .user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 0px 15px 10px;
+}
+
+.page .container .chat-app .chat-bg .c-header .user .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page .container .chat-app .chat-bg .c-header .user .info>i {
+  color: white;
+  font-size: 10px;
+  margin-right: 5px;
+}
+
+.page .container .chat-app .chat-bg .c-header .user .info>img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.page .container .chat-app .chat-bg .c-header .user .info .name {
+  margin-left: 10px;
+}
+
+.page .container .chat-app .chat-bg .c-header .user .info .name>span:first-of-type {
+  display: block;
+  color: white;
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+.page .container .chat-app .chat-bg .c-header .user .info .name>span:last-of-type {
+  display: block;
+  font-size: 9px;
+  color: hsl(276, 100%, 81%);
+}
+
+.page .container .chat-app .chat-bg .c-header .user .menu i {
+  color: white;
+  font-size: 10px;
+}
+
+/* Start Chat Body */
+.page .container .chat-app .chat-bg .c-body {
+  margin-top: 10px;
+}
+
+.page .container .chat-app .chat-bg .c-body .img-msg {
+  margin-top: 15px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 7px;
+  margin-right: 7px;
+}
+
+.page .container .chat-app .chat-bg .c-body .img-msg img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.page .container .chat-app .chat-bg .c-body .text-msg.service {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(45deg, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+  color: white;
+  padding: 10px;
+  width: 155px;
+}
+
+.page .container .chat-app .chat-bg .c-body .text-msg.service .opt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.page .container .chat-app .chat-bg .c-body .text-msg.service .opt .radio {
+  width: 10px;
+  height: 10px;
+  border: 1px solid white;
+  border-radius: 50%;
+  opacity: .6;
+}
+
+.page .container .chat-app .chat-bg .c-body .text-msg.service .opt .time {
+  font-size: 8px;
+  opacity: .7;
+}
+
+.page .container .chat-app .chat-bg .c-body .text-msg.service .price {
+  font-weight: bold;
+  font-size: 11px;
+  padding-right: 5px;
+}
+
+/* End Chat Body */
+
+/* Start Chat Text Msg Area */
+
+.page .container .chat-app .chat-bg .c-footer .text-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 5px 0 5px 10px;
+  margin: 15px 8px;
+  border-radius: 75px;
+}
+
+.page .container .chat-app .chat-bg .c-footer .text-area>span {
+  color: hsl(206, 6%, 79%);
+  font-size: 10px;
+  margin-left: 10px;
+}
+
+.page .container .chat-app .chat-bg .c-footer .text-area .submit-btn {
+  font-size: 12px;
+  color: white;
+  background-color: hsl(271, 36%, 24%);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 4px;
+}
+
+/* End Chat Text Msg Area */
+
+/* Start Main Page Text */
+.page .container .text {
+  width: 445px;
+}
+
+.page .container .text>h1 {
+  font-size: 40px;
+  font-weight: 500;
+  color: hsl(271, 36%, 24%);
+}
+
+.page .container .text>p {
+  color: hsl(270, 7%, 64%);
+  line-height: 1.6;
+}
+
+/* End Main Page Text */
+
+/* End Mobile Chat App */
